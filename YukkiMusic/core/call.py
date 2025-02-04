@@ -309,16 +309,16 @@ class Call:
                 )
             except Exception as e:
                 raise AssistantErr(
-                    "**No Active Voice Chat Found**\n\nPlease make sure group's voice chat is enabled. If already enabled, please end it and start fresh voice chat again and if the problem continues, try /restart"
+                    "**ɴᴏ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ꜰᴏᴜɴᴅ**\n\nɴᴘʟᴇᴀꜱᴇ ᴍᴀᴋᴇ ꜱᴜʀᴇ ɢʀᴏᴜᴘ'ꜱ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɪꜱ ᴇɴᴀʙʟᴇᴅ. ɪꜰ ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ, ᴘʟᴇᴀꜱᴇ ᴇɴᴅ ɪᴛ ᴀɴᴅ ꜱᴛᴀʀᴛ ꜰʀᴇꜱʜ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴀɢᴀɪɴ ᴀɴᴅ ɪꜰ ᴛʜᴇ ᴘʀᴏʙʟᴇᴍ ᴄᴏɴᴛɪɴᴜᴇꜱ,ᴛʀʏ /ʀᴇꜱᴛᴀʀᴛ"
                 )
 
         except AlreadyJoinedError:
             raise AssistantErr(
-                "**ASSISTANT IS ALREADY IN VOICECHAT **\n\nMusic bot system detected that assistant is already in the voicechat, if the problem continues restart the videochat and try again."
+                "**ᴀꜱꜱɪꜱᴛᴀɴᴛ ɪꜱ ᴀʟʀᴇᴀᴅʏ ɪɴ ᴠᴏɪᴄᴇᴄʜᴀᴛ**\n\nᴍᴜꜱɪᴄ ʙᴏᴛ ꜱʏꜱᴛᴇᴍ ᴅᴇᴛᴇᴄᴛᴇᴅ ᴛʜᴀᴛ ᴀꜱꜱɪꜱᴛᴀɴᴛ ɪꜱ ᴀʟʀᴇᴀᴅʏ ɪɴ ᴛʜᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛ, ɪꜰ ᴛʜᴇ ᴘʀᴏʙʟᴇᴍ ᴄᴏɴᴛɪɴᴜᴇꜱ ʀᴇꜱᴛᴀʀᴛ ᴛʜᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ."
             )
         except TelegramServerError:
             raise AssistantErr(
-                "**TELEGRAM SERVER ERROR**\n\nPlease restart Your voicechat."
+                "**ᴛᴇʟᴇɢʀᴀᴍ ꜱᴇʀᴠᴇʀ ᴇʀʀᴏʀ**\n\nᴘʟᴇᴀꜱᴇ ʀᴇꜱᴛᴀʀᴛ ʏᴏᴜʀ ᴠᴏɪᴄᴇᴄʜᴀᴛ
             )
         await add_active_chat(chat_id)
         await music_on(chat_id)
