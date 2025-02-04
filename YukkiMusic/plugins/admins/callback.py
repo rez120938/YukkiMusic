@@ -701,7 +701,7 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
         )
     if task.done() or task.cancelled():
         return await CallbackQuery.answer(
-            "Downloading already Completed or Cancelled.",
+            "ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴀʟʀᴇᴀᴅʏ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴏʀ ᴄᴀɴᴄᴇʟʟᴇᴅ.",
             show_alert=True,
         )
     if not task.done():
@@ -711,13 +711,13 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
                 lyrical.pop(message_id)
             except Exception:
                 pass
-            await CallbackQuery.answer("Downloading Cancelled", show_alert=True)
+            await CallbackQuery.answer("ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴄᴀɴᴄᴇʟʟᴇᴅ", show_alert=True)
             return await CallbackQuery.edit_message_text(
-                f"Downloading cancelled by {CallbackQuery.from_user.mention}"
+                f"ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴄᴀɴᴄᴇʟʟᴇᴅ ʙʏ {CallbackQuery.from_user.mention}"
             )
         except Exception:
             return await CallbackQuery.answer(
-                "Failed to stop downloading", show_alert=True
+                "ꜰᴀɪʟᴇᴅ ᴛᴏ ꜱᴛᴏᴘ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ", show_alert=True
             )
 
-    await CallbackQuery.answer("Failed to Recognise Task", show_alert=True)
+    await CallbackQuery.answer("ꜰᴀɪʟᴇᴅ ᴛᴏ ʀᴇᴄᴏɢɴɪꜱᴇ ᴛᴀꜱᴋ", show_alert=True)
