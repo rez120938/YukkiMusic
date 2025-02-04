@@ -37,11 +37,11 @@ class Userbot(Client):
         self.handlers = []
 
     def add(self, *args, **kwargs):
-        """Add a new client to the Userbot."""
+        """ᴀᴅᴅ ᴀ ɴᴇᴡ ᴄʟɪᴇɴᴛ ᴛᴏ ᴛʜᴇ ᴜꜱᴇʀʙᴏᴛ."""
         self.clients.append(Client(*args, **kwargs))
 
     async def _start(self, client, index):
-        LOGGER(__name__).info(f"Starting Assistant Client {index}")
+        LOGGER(__name__).info(f"ꜱᴛᴀʀᴛɪɴɢ ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴄʟɪᴇɴᴛ {index}")
         try:
             await client.start()
             assistants.append(index)
@@ -53,8 +53,8 @@ class Userbot(Client):
                     await client.send_message(config.LOG_GROUP_ID, "Assistant Started")
                 except Exception:
                     LOGGER(__name__).error(
-                        f"Assistant Account {index} failed to send message in log group. "
-                        f"Ensure the assistant is added to the log group."
+                        f"ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ {index} ꜰᴀɪʟᴇᴅ ᴛᴏ ꜱᴇɴᴅ ᴍᴇꜱꜱᴀɢᴇ ɪɴ ʟᴏɢ ɢʀᴏᴜᴘ. "
+                        f"ᴇɴꜱᴜʀᴇ ᴛʜᴇ ᴀꜱꜱɪꜱᴛᴀɴᴛ ɪꜱ ᴀᴅᴅᴇᴅ ᴛᴏ ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ."
                     )
                     sys.exit(1)
 
@@ -71,22 +71,22 @@ class Userbot(Client):
 
         except Exception as e:
             LOGGER(__name__).error(
-                f"Assistant Account {index} failed with error: {str(e)}. Exiting..."
+                f"ᴀꜱꜱɪꜱᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ {index} ꜰᴀɪʟᴇᴅ ᴡɪᴛʜ ᴇʀʀᴏʀ: {str(e)}. ᴇxɪᴛɪɴɢ..."
             )
             sys.exit(1)
 
     async def start(self):
-        """Start all clients."""
+        """ꜱᴛᴀʀᴛ ᴀʟʟ ᴄʟɪᴇɴᴛꜱ."""
         tasks = [self._start(client, i) for i, client in enumerate(self.clients, start=1)]
         await asyncio.gather(*tasks)
 
     async def stop(self):
-        """Gracefully stop all clients."""
+        """ɢʀᴀᴄᴇꜰᴜʟʟʏ ꜱᴛᴏᴘ ᴀʟʟ ᴄʟɪᴇɴᴛꜱ."""
         tasks = [client.stop() for client in self.clients]
         await asyncio.gather(*tasks)
 
     def on_message(self, filters=None, group=0): # on_message decirator for future Userbot Plugins
-        """Decorator for handling messages with error handling."""
+        """ᴅᴇᴄᴏʀᴀᴛᴏʀ ꜰᴏʀ ʜᴀɴᴅʟɪɴɢ ᴍᴇꜱꜱᴀɢᴇꜱ ᴡɪᴛʜ ᴇʀʀᴏʀ ʜᴀɴᴅʟɪɴɢ."""
         def decorator(func):
             @wraps(func)
             async def wrapper(client, message):
@@ -118,13 +118,13 @@ class Userbot(Client):
                     )
                     error_trace = traceback.format_exc()
                     error_message = (
-                        f"**Error:** {type(e).__name__}\n"
-                        f"**Date:** {date_time}\n"
-                        f"**Chat ID:** {chat_id}\n"
-                        f"**Chat Username:** {chat_username}\n"
-                        f"**User ID:** {user_id}\n"
-                        f"**Command/Text:** {command}\n"
-                        f"**Traceback:**\n{error_trace}"
+                        f"**ᴇʀʀᴏʀ:** {type(e).__name__}\n"
+                        f"**ᴅᴀᴛᴇ:** {date_time}\n"
+                        f"**ᴄʜᴀᴛ ɪᴅ:** {chat_id}\n"
+                        f"**ᴄʜᴀᴛ ᴜꜱᴇʀɴᴀᴍᴇ:** {chat_username}\n"
+                        f"**ᴜꜱᴇʀ ɪᴅ:** {user_id}\n"
+                        f"**ᴄᴏᴍᴍᴀɴᴅ/ᴛᴇxᴛ:** {command}\n"
+                        f"**ᴛʀᴀᴄᴇʙᴀᴄᴋ:**\n{error_trace}"
                     )
                     await client.send_message(config.LOG_GROUP_ID, error_message)
                     try:
