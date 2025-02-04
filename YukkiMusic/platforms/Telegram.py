@@ -140,7 +140,7 @@ class Telegram:
                     [
                         [
                             InlineKeyboardButton(
-                                text="🚦 Cancel downloading",
+                                text="🚦 ᴄᴀɴᴄᴇʟ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ",
                                 callback_data="stop_downloading",
                             ),
                         ]
@@ -159,14 +159,14 @@ class Telegram:
                     completed_size = convert_bytes(current)
                     speed = convert_bytes(speed)
                     text = f"""
-**{app.mention} Telagram Media Downloader**
+**{app.mention} ᴛᴇʟᴀɢʀᴀᴍ ᴍᴇᴅɪᴀ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ**
 
-**Total file size:** {total_size}
-**Completed:** {completed_size} 
-**Percentage:** {percentage[:5]}%
+**ᴛᴏᴛᴀʟ ꜰɪʟᴇ ꜱɪᴢᴇ:** {total_size}
+**ᴄᴏᴍᴘʟᴇᴛᴇᴅ:** {completed_size} 
+**ᴘᴇʀᴄᴇɴᴛᴀɢᴇ:** {percentage[:5]}%
 
-**Speed:** {speed}/s
-**Elapsed Time:** {eta}"""
+**ꜱᴘᴇᴇᴅ:** {speed}/s
+**ᴇʟᴀᴘꜱᴇᴅ ᴛɪᴍᴇ:** {eta}"""
                     try:
                         await mystic.edit_text(text, reply_markup=upl)
                     except Exception:
@@ -185,7 +185,7 @@ class Telegram:
                     progress=progress,
                 )
                 await mystic.edit_text(
-                    "Sucessfully Downloaded\n Processing File Now..."
+                    "ꜱᴜᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ\n ᴘʀᴏᴄᴇꜱꜱɪɴɢ ꜰɪʟᴇ ɴᴏᴡ..."
                 )
                 downloader.pop(message.id, None)
             except Exception:
