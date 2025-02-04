@@ -80,7 +80,7 @@ async def start_comm(client, message: Message, _):
                 disable_web_page_preview=True,
             )
         if name[0:3] == "sta":
-            m = await message.reply_text("🔎 Fetching Your personal stats.!")
+            m = await message.reply_text("🔎 ꜰᴇᴛᴄʜɪɴɢ ʏᴏᴜʀ ᴘᴇʀꜱᴏɴᴀʟ ꜱᴛᴀᴛꜱ !")
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
             if not stats:
@@ -139,7 +139,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} Has just started bot to check <code>Sudolist </code>\n\n**User Id:** {sender_id}\n**User Name:** {sender_name}",
+                    f"{message.from_user.mention} ʜᴀꜱ ᴊᴜꜱᴛ ꜱᴛᴀʀᴛᴇᴅ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ  <code>Sudolist </code>\n\n**ᴜꜱᴇʀ ɪᴅ:** {sender_id}\n**ᴜꜱᴇʀɴᴀᴍᴇ:** {sender_name}",
                 )
             return
         if name[0:3] == "lyr":
@@ -170,16 +170,16 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-🔍__**Video track information **__
+🔍__**ᴠɪᴅᴇᴏ ᴛʀᴀᴄᴋ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ**__
 
-❇️**Title:** {title}
+❇️**ᴛɪᴛʟᴇ:** {title}
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published times:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit from here]({channellink})
-🔗**Videp linl:** [Link]({link})
+⏳**ᴅᴜʀᴀᴛɪᴏɴ:** {duration} Mins
+👀**ᴠɪᴇᴡꜱ:** `{views}`
+⏰**ᴘᴜʙʟɪꜱʜᴇᴅ ᴛɪᴍᴇꜱ:** {published}
+🎥**ᴄʜᴀɴɴᴇʟ ɴᴀᴍᴇ:** {channel}
+📎**ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ:** [Visit from here]({channellink})
+🔗**ᴠɪᴅᴇᴏ ʟɪɴᴋ:** [Link]({link})
 """
             key = InlineKeyboardMarkup(
                 [
@@ -203,7 +203,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} Has just started bot ot check <code> Video information  </code>\n\n**User Id:** {sender_id}\n**User Name** {sender_name}",
+                    f"{message.from_user.mention} ʜᴀꜱ ᴊᴜꜱᴛ ꜱᴛᴀʀᴛᴇᴅ ʙᴏᴛ ᴏᴛ ᴄʜᴇᴄᴋ <code> ᴠɪᴅᴇᴏ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ  </code>\n\n**User Id:** {sender_id}\n**ᴜꜱᴇʀ ɴᴀᴍᴇ** {sender_name}",
                 )
     else:
         try:
@@ -234,7 +234,7 @@ async def start_comm(client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"{message.from_user.mention} Has started bot. \n\n**User id :** {sender_id}\n**User name:** {sender_name}",
+                f"{message.from_user.mention} ʜᴀꜱ ꜱᴛᴀʀᴛᴇᴅ ʙᴏᴛ. \n\n**ᴜꜱᴇʀ ɪᴅ :** {sender_id}\n**ᴜꜱᴇʀɴᴀᴍᴇ:** {sender_name}",
             )
 
 
@@ -254,7 +254,7 @@ async def welcome(client, message: Message):
     if config.PRIVATE_BOT_MODE == str(True):
         if not await is_served_private_chat(message.chat.id):
             await message.reply_text(
-                "This Bot's private mode has been enabled only my owner can use this if want to use in your chat so say my Owner to authorize your chat."
+                "ᴛʜɪꜱ ʙᴏᴛ'ꜱ ᴘʀɪᴠᴀᴛᴇ ᴍᴏᴅᴇ ʜᴀꜱ ʙᴇᴇɴ ᴇɴᴀʙʟᴇᴅ ᴏɴʟʏ ᴍʏ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜꜱᴇ ᴛʜɪꜱ ɪꜰ ᴡᴀɴᴛ ᴛᴏ ᴜꜱᴇ ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ ꜱᴏ ꜱᴀʏ ᴍʏ ᴏᴡɴᴇʀ ᴛᴏ ᴀᴜᴛʜᴏʀɪᴢᴇ ʏᴏᴜʀ ᴄʜᴀᴛ."
             )
             return await app.leave_chat(message.chat.id)
     else:
