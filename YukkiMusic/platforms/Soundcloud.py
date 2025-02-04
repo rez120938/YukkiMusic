@@ -40,10 +40,10 @@ class SoundCloud:
             xyz = path.join("downloads", f"{info['id']}.{info['ext']}")
             duration_min = seconds_to_min(info["duration"])
             track_details = {
-                "title": info["title"],
-                "duration_sec": info["duration"],
-                "duration_min": duration_min,
-                "uploader": info["uploader"],
-                "filepath": xyz,
+                "ᴛɪᴛʟᴇ": info["title"],
+                "ᴅᴜʀᴀᴛɪᴏɴ_ꜱᴇᴄ": info["duration"],
+                "ᴅᴜʀᴀᴛɪᴏɴ_ᴍɪɴ": duration_min,
+                "ᴜᴘʟᴏᴀᴅᴇʀ": info["uploader"],
+                "ꜰɪʟᴇᴘᴀᴛʜ": xyz,
             }
             return track_details, xyz
