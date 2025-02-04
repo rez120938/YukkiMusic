@@ -54,11 +54,11 @@ class Saavn:
                         break
                     duration_sec = entry.get("duration", 0)
                     info = {
-                        "title": entry["title"],
-                        "duration_sec": duration_sec,
-                        "duration_min": seconds_to_time(duration_sec),
-                        "thumb": entry.get("thumbnail", ""),
-                        "url": self.clean_url(entry["url"]),
+                        "ᴛɪᴛʟᴇ": entry["title"],
+                        "ᴅᴜʀᴀᴛɪᴏɴ_ꜱᴇᴄ": duration_sec,
+                        "ᴅᴜʀᴀᴛɪᴏɴ_ᴍɪɴ": seconds_to_time(duration_sec),
+                        "ᴛʜᴜᴍʙ": entry.get("thumbnail", ""),
+                        "ᴜʀʟ": self.clean_url(entry["url"]),
                     }
                     song_info.append(info)
                     count += 1
@@ -80,11 +80,11 @@ class Saavn:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(clean_url, download=False)
             return {
-                "title": info["title"],
-                "duration_sec": info.get("duration", 0),
-                "duration_min": seconds_to_time(info.get("duration", 0)),
-                "thumb": info.get("thumbnail", None),
-                "url": self.clean_url(info["url"]),
+                "ᴛɪᴛʟᴇ": info["title"],
+                "ᴅᴜʀᴀᴛɪᴏɴ_ꜱᴇᴄ": info.get("duration", 0),
+                "ᴅᴜʀᴀᴛɪᴏɴ_ᴍɪɴ": seconds_to_time(info.get("duration", 0)),
+                "ᴛʜᴜᴍʙ": info.get("thumbnail", None),
+                "ᴜʀʟ": self.clean_url(info["url"]),
             }
 
     @asyncify
@@ -108,20 +108,20 @@ class Saavn:
 
             if os.path.exists(file_path):
                 return file_path, {
-                    "title": info["title"],
-                    "duration_sec": info.get("duration", 0),
-                    "duration_min": seconds_to_time(info.get("duration", 0)),
-                    "thumb": info.get("thumbnail", None),
-                    "url": self.clean_url(info["url"]),
-                    "filepath": file_path,
+                    "ᴛɪᴛʟᴇ": info["title"],
+                    "ᴅᴜʀᴀᴛɪᴏɴ_ꜱᴇᴄ": info.get("duration", 0),
+                    "ᴅᴜʀᴀᴛɪᴏɴ_ᴍɪɴ": seconds_to_time(info.get("duration", 0)),
+                    "ᴛʜᴜᴍʙ": info.get("thumbnail", None),
+                    "ᴜʀʟ": self.clean_url(info["url"]),
+                    "ꜰɪʟᴇᴘᴀᴛʜ": file_path,
                 }
 
             ydl.download([clean_url])
             return file_path, {
-                "title": info["title"],
-                "duration_sec": info.get("duration", 0),
-                "duration_min": seconds_to_time(info.get("duration", 0)),
-                "thumb": info.get("thumbnail", None),
-                "url": self.clean_url(info["url"]),
-                "filepath": file_path,
+                "ᴛɪᴛʟᴇ": info["title"],
+                "ᴅᴜʀᴀᴛɪᴏɴ_ꜱᴇᴄ": info.get("duration", 0),
+                "ᴅᴜʀᴀᴛɪᴏɴ_ᴍɪɴ": seconds_to_time(info.get("duration", 0)),
+                "ᴛʜᴜᴍʙ": info.get("thumbnail", None),
+                "ᴜʀʟ": self.clean_url(info["url"]),
+                "ꜰɪʟᴇᴘᴀᴛʜ": file_path,
             }
