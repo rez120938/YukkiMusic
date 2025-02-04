@@ -30,7 +30,7 @@ def cookies():
     folder_path = f"{os.getcwd()}/cookies"
     txt_files = [file for file in os.listdir(folder_path) if file.endswith(".txt")]
     if not txt_files:
-        raise FileNotFoundError("No Cookies found in cookies directory make sure your cookies file written  .txt file")
+        raise FileNotFoundError("ɴᴏ ᴄᴏᴏᴋɪᴇꜱ ꜰᴏᴜɴᴅ ɪɴ ᴄᴏᴏᴋɪᴇꜱ ᴅɪʀᴇᴄᴛᴏʀʏ ᴍᴀᴋᴇ ꜱᴜʀᴇ ʏᴏᴜʀ ᴄᴏᴏᴋɪᴇꜱ ꜰɪʟᴇ ᴡʀɪᴛᴛᴇɴ  .ᴛxᴛ ꜰɪʟᴇ")
     cookie_txt_file = random.choice(txt_files)
     cookie_txt_file = os.path.join(folder_path, cookie_txt_file)
     return cookie_txt_file
@@ -45,7 +45,7 @@ async def shell_cmd(cmd):
     )
     out, errorz = await proc.communicate()
     if errorz:
-        if "unavailable videos are hidden" in (errorz.decode("utf-8")).lower():
+        if "ᴜɴᴀᴠᴀɪʟᴀʙʟᴇ ᴠɪᴅᴇᴏꜱ ᴀʀᴇ ʜɪᴅᴅᴇɴ" in (errorz.decode("utf-8")).lower():
             return out.decode("utf-8")
         else:
             return errorz.decode("utf-8")
