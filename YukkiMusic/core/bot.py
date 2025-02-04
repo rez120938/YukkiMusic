@@ -46,7 +46,7 @@ from ..logging import LOGGER
 
 class YukkiBot(Client):
     def __init__(self, *args, **kwargs):
-        LOGGER(__name__).info("Starting Bot...")
+        LOGGER(__name__).info("ꜱᴛᴀʀᴛɪɴɢ ʙᴏᴛ...")
         
         super().__init__(*args, **kwargs)
         self.loaded_plug_counts = 0
@@ -82,13 +82,13 @@ class YukkiBot(Client):
                     )
                     error_trace = traceback.format_exc()
                     error_message = (
-                        f"**Error:** {type(e).__name__}\n"
-                        f"**Date:** {date_time}\n"
-                        f"**Chat ID:** {chat_id}\n"
-                        f"**Chat Username:** {chat_username}\n"
-                        f"**User ID:** {user_id}\n"
-                        f"**Command/Text:** {command}\n"
-                        f"**Traceback:**\n{error_trace}"
+                        f"**ᴇʀʀᴏʀ:** {type(e).__name__}\n"
+                        f"**ᴅᴀᴛᴇ:** {date_time}\n"
+                        f"**ᴄʜᴀᴛ ɪᴅ:** {chat_id}\n"
+                        f"**ᴄʜᴀᴛ ᴜꜱᴇʀɴᴀᴍᴇ:** {chat_username}\n"
+                        f"**ᴜꜱᴇʀ ɪᴅ:** {user_id}\n"
+                        f"**ᴄᴏᴍᴍᴀɴᴅ/ᴛᴇxᴛ:** {command}\n"
+                        f"**ᴛʀᴀᴄᴇʙᴀᴄᴋ:**\n{error_trace}"
                     )
                     await self.send_message(config.LOG_GROUP_ID, error_message)
                     try:
@@ -114,15 +114,15 @@ class YukkiBot(Client):
             await self.send_message(
                 config.LOG_GROUP_ID,
                 text=(
-                    f"<u><b>{self.mention} Bot Started :</b></u>\n\n"
-                    f"Id : <code>{self.id}</code>\n"
-                    f"Name : {self.name}\n"
-                    f"Username : @{self.username}"
+                    f"<u><b>{self.mention} ʙᴏᴛ ꜱᴛᴀʀᴛᴇᴅ:</b></u>\n\n"
+                    f"ɪᴅ: <code>{self.id}</code>\n"
+                    f"ɴᴀᴍᴇ: {self.name}\n"
+                    f"ᴜꜱᴇʀɴᴀᴍᴇ: @{self.username}"
                 ),
             )
         except (errors.ChannelInvalid, errors.PeerIdInvalid):
             LOGGER(__name__).error(
-                "Bot failed to access the log group. Ensure the bot is added and promoted as admin."
+                "ʙᴏᴛ ꜰᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇꜱꜱ ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ.ᴇɴꜱᴜʀᴇ ᴛʜᴇ ʙᴏᴛ ɪꜱ ᴀᴅᴅᴇᴅ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇᴅ ᴀꜱ ᴀᴅᴍɪɴ."
             )
             LOGGER(__name__).error("Error details:", exc_info=True)
             exit()
@@ -130,12 +130,12 @@ class YukkiBot(Client):
             try:
                 await self._set_default_commands()
             except Exception as e:
-                LOGGER(__name__).warning("Failed to set commands:", exc_info=True)
+                LOGGER(__name__).warning("ꜰᴀɪʟᴇᴅ ᴛᴏ ꜱᴇᴛ ᴄᴏᴍᴍᴀɴᴅꜱ:", exc_info=True)
 
         try:
             a = await self.get_chat_member(config.LOG_GROUP_ID, "me")
             if a.status != ChatMemberStatus.ADMINISTRATOR:
-                LOGGER(__name__).error("Please promote bot as admin in logger group")
+                LOGGER(__name__).error("ᴘʟᴇᴀꜱᴇ ᴘʀᴏᴍᴏᴛᴇ ʙᴏᴛ ᴀꜱ ᴀᴅᴍɪɴ ɪɴ ʟᴏɢɢᴇʀ ɢʀᴏᴜᴘ")
                 exit()
         except Exception:
             pass
@@ -143,20 +143,20 @@ class YukkiBot(Client):
 
     async def _set_default_commands(self):
         private_commands = [
-            BotCommand("start", "Start the bot"),
-            BotCommand("help", "Get the help menu"),
-            BotCommand("ping", "Check if the bot is alive or dead"),
+            BotCommand("start", "ꜱᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ"),
+            BotCommand("help", "ɢᴇᴛ ᴛʜᴇ ʜᴇʟᴘ ᴍᴇɴᴜ"),
+            BotCommand("ping", "ᴄʜᴇᴄᴋ ɪꜰ ᴛʜᴇ ʙᴏᴛ ɪꜱ ᴀʟɪᴠᴇ ᴏʀ ᴅᴇᴀᴅ"),
         ]
-        group_commands = [BotCommand("play", "Start playing requested song")]
+        group_commands = [BotCommand("play", "ꜱᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜱᴏɴɢ")]
         admin_commands = [
-            BotCommand("play", "Start playing requested song"),
-            BotCommand("skip", "Move to next track in queue"),
-            BotCommand("pause", "Pause the current playing song"),
-            BotCommand("resume", "Resume the paused song"),
-            BotCommand("end", "Clear the queue and leave voice chat"),
-            BotCommand("shuffle", "Randomly shuffle the queued playlist"),
-            BotCommand("playmode", "Change the default playmode for your chat"),
-            BotCommand("settings", "Open bot settings for your chat"),
+            BotCommand("play", "ꜱᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜱᴏɴɢ"),
+            BotCommand("skip", "ᴍᴏᴠᴇ ᴛᴏ ɴᴇxᴛ ᴛʀᴀᴄᴋ ɪɴ Qᴜᴇᴜᴇ"),
+            BotCommand("pause", "ᴘᴀᴜꜱᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ ꜱᴏɴɢ"),
+            BotCommand("resume", "ʀᴇꜱᴜᴍᴇ ᴛʜᴇ ᴘᴀᴜꜱᴇᴅ ꜱᴏɴɢ "),
+            BotCommand("end", "ᴄʟᴇᴀʀ ᴛʜᴇ Qᴜᴇᴜᴇ ᴀɴᴅ ʟᴇᴀᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ"),
+            BotCommand("shuffle", "ʀᴀɴᴅᴏᴍʟʏ ꜱʜᴜꜰꜰʟᴇ ᴛʜᴇ Qᴜᴇᴜᴇᴅ ᴘʟᴀʏʟɪꜱᴛ"),
+            BotCommand("playmode", "ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴅᴇꜰᴀᴜʟᴛ ᴘʟᴀʏᴍᴏᴅᴇ ꜰᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ"),
+            BotCommand("settings", "ᴏᴘᴇɴ ʙᴏᴛ ꜱᴇᴛᴛɪɴɢꜱ ꜰᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ"),
         ]
         owner_commands = [
             BotCommand("update", "Update the bot"),
