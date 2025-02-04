@@ -23,9 +23,8 @@ from YukkiMusic.utils.database import (
 TEXT = f"""
 🔒 **Privacy Policy for {app.mention} !**
 
-Your privacy is important to us. To learn more about how we collect, use, and protect your data, please review our Privacy Policy here: [Privacy Policy](https://github.com/TheTeamVivek/YukkiMusic/blob/master/PRIVACY.md).
-
-If you have any questions or concerns, feel free to reach out to our [Support Team]({config.SUPPORT_GROUP}).
+𝐘𝐨𝐮𝐫 𝐩𝐫𝐢𝐯𝐚𝐜𝐲 𝐢𝐬 𝐢𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭 𝐭𝐨 𝐮𝐬. 𝐓𝐨 𝐥𝐞𝐚𝐫𝐧 𝐦𝐨𝐫𝐞 𝐚𝐛𝐨𝐮𝐭 𝐡𝐨𝐰 𝐰𝐞 𝐜𝐨𝐥𝐥𝐞𝐜𝐭, 𝐮𝐬𝐞, 𝐚𝐧𝐝 𝐩𝐫𝐨𝐭𝐞𝐜𝐭 𝐲𝐨𝐮𝐫 𝐝𝐚𝐭𝐚.   
+𝐈𝐟 𝐲𝐨𝐮 𝐡𝐚𝐯𝐞 𝐚𝐧𝐲 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐨𝐫 𝐜𝐨𝐧𝐜𝐞𝐫𝐧𝐬, 𝐟𝐞𝐞𝐥 𝐟𝐫𝐞𝐞 𝐭𝐨 𝐫𝐞𝐚𝐜𝐡 𝐨𝐮𝐭 𝐭𝐨 𝐨𝐮𝐫 [Support Team]({config.SUPPORT_GROUP}).
 """
 
 
@@ -33,52 +32,52 @@ PRIVACY_SECTIONS = {
     "collect": """
 **What Information We Collect**
 
-• Basic Telegram user data (ID, username)
-• Chat/Group IDs where the bot is used
-• Command usage and interactions
-• Playlists and music preferences
-• Voice chat participation data
-• User settings and configurations
+• 𝐁𝐚𝐬𝐢𝐜 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐮𝐬𝐞𝐫 𝐝𝐚𝐭𝐚 (𝐈𝐃, 𝐮𝐬𝐞𝐫𝐧𝐚𝐦𝐞) 
+• 𝐂𝐡𝐚𝐭/𝐆𝐫𝐨𝐮𝐩 𝐈𝐃𝐬 𝐰𝐡𝐞𝐫𝐞 𝐭𝐡𝐞 𝐛𝐨𝐭 𝐢𝐬 𝐮𝐬𝐞𝐝 
+• 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐮𝐬𝐚𝐠𝐞 𝐚𝐧𝐝 𝐢𝐧𝐭𝐞𝐫𝐚𝐜𝐭𝐢𝐨𝐧𝐬 
+• 𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭𝐬 𝐚𝐧𝐝 𝐦𝐮𝐬𝐢𝐜 𝐩𝐫𝐞𝐟𝐞𝐫𝐞𝐧𝐜𝐞𝐬 
+• 𝐕𝐨𝐢𝐜𝐞 𝐜𝐡𝐚𝐭 𝐩𝐚𝐫𝐭𝐢𝐜𝐢𝐩𝐚𝐭𝐢𝐨𝐧 𝐝𝐚𝐭𝐚 
+• 𝐔𝐬𝐞𝐫 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬 𝐚𝐧𝐝 𝐜𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧𝐬
 """,
     "why": """
 **Why We Collect It**
 
-• To provide music streaming services
-• To maintain user playlists
-• To process voice chat requests
-• To manage user permissions
-• To improve bot features
-• To prevent abuse and spam
+• 𝐓𝐨 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐦𝐮𝐬𝐢𝐜 𝐬𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐬𝐞𝐫𝐯𝐢𝐜𝐞𝐬 
+• 𝐓𝐨 𝐦𝐚𝐢𝐧𝐭𝐚𝐢𝐧 𝐮𝐬𝐞𝐫 𝐩𝐥𝐚𝐲𝐥𝐢𝐬𝐭𝐬 
+• 𝐓𝐨 𝐩𝐫𝐨𝐜𝐞𝐬𝐬 𝐯𝐨𝐢𝐜𝐞 𝐜𝐡𝐚𝐭 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐬 
+• 𝐓𝐨 𝐦𝐚𝐧𝐚𝐠𝐞 𝐮𝐬𝐞𝐫 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧𝐬 
+• 𝐓𝐨 𝐢𝐦𝐩𝐫𝐨𝐯𝐞 𝐛𝐨𝐭 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬 
+• 𝐓𝐨 𝐩𝐫𝐞𝐯𝐞𝐧𝐭 𝐚𝐛𝐮𝐬𝐞 𝐚𝐧𝐝 𝐬𝐩𝐚𝐦
 """,
     "do": """
 **What We Do**
 
-• Store data securely in encrypted databases
-• Process music requests and streams
-• Maintain user preferences
-• Monitor for proper functionality
-• Delete temporary files after use
-• Implement security measures
+• 𝐒𝐭𝐨𝐫𝐞 𝐝𝐚𝐭𝐚 𝐬𝐞𝐜𝐮𝐫𝐞𝐥𝐲 𝐢𝐧 𝐞𝐧𝐜𝐫𝐲𝐩𝐭𝐞𝐝 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞𝐬 
+• 𝐏𝐫𝐨𝐜𝐞𝐬𝐬 𝐦𝐮𝐬𝐢𝐜 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐬 𝐚𝐧𝐝 𝐬𝐭𝐫𝐞𝐚𝐦𝐬 
+• 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧 𝐮𝐬𝐞𝐫 𝐩𝐫𝐞𝐟𝐞𝐫𝐞𝐧𝐜𝐞𝐬 
+• 𝐌𝐨𝐧𝐢𝐭𝐨𝐫 𝐟𝐨𝐫 𝐩𝐫𝐨𝐩𝐞𝐫 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐚𝐥𝐢𝐭𝐲 
+• 𝐃𝐞𝐥𝐞𝐭𝐞 𝐭𝐞𝐦𝐩𝐨𝐫𝐚𝐫𝐲 𝐟𝐢𝐥𝐞𝐬 𝐚𝐟𝐭𝐞𝐫 𝐮𝐬𝐞 
+• 𝐈𝐦𝐩𝐥𝐞𝐦𝐞𝐧𝐭 𝐬𝐞𝐜𝐮𝐫𝐢𝐭𝐲 𝐦𝐞𝐚𝐬𝐮𝐫𝐞𝐬
 """,
     "donot": """
 **What We Don't Do**
 
-• Share your data with third parties
-• Store unnecessary personal information
-• Keep data longer than needed
-• Use data for marketing
-• Track users across platforms
-• Sell any user information
+• 𝐒𝐡𝐚𝐫𝐞 𝐲𝐨𝐮𝐫 𝐝𝐚𝐭𝐚 𝐰𝐢𝐭𝐡 𝐭𝐡𝐢𝐫𝐝 𝐩𝐚𝐫𝐭𝐢𝐞𝐬 
+• 𝐒𝐭𝐨𝐫𝐞 𝐮𝐧𝐧𝐞𝐜𝐞𝐬𝐬𝐚𝐫𝐲 𝐩𝐞𝐫𝐬𝐨𝐧𝐚𝐥 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 
+• 𝐊𝐞𝐞𝐩 𝐝𝐚𝐭𝐚 𝐥𝐨𝐧𝐠𝐞𝐫 𝐭𝐡𝐚𝐧 𝐧𝐞𝐞𝐝𝐞𝐝 
+• 𝐔𝐬𝐞 𝐝𝐚𝐭𝐚 𝐟𝐨𝐫 𝐦𝐚𝐫𝐤𝐞𝐭𝐢𝐧𝐠 
+• 𝐓𝐫𝐚𝐜𝐤 𝐮𝐬𝐞𝐫𝐬 𝐚𝐜𝐫𝐨𝐬𝐬 𝐩𝐥𝐚𝐭𝐟𝐨𝐫𝐦𝐬 
+• 𝐒𝐞𝐥𝐥 𝐚𝐧𝐲 𝐮𝐬𝐞𝐫 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧
 """,
     "rights": """
 **Your Rights**
 
-• Access your stored data
-• Request data deletion
-• Modify your settings
-• Opt-out of data collection
-• Report privacy concerns
-• Contact support for help
+• 𝐀𝐜𝐜𝐞𝐬𝐬 𝐲𝐨𝐮𝐫 𝐬𝐭𝐨𝐫𝐞𝐝 𝐝𝐚𝐭𝐚 
+• 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐝𝐚𝐭𝐚 𝐝𝐞𝐥𝐞𝐭𝐢𝐨𝐧 
+• 𝐌𝐨𝐝𝐢𝐟𝐲 𝐲𝐨𝐮𝐫 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬 
+• 𝐎𝐩𝐭-𝐨𝐮𝐭 𝐨𝐟 𝐝𝐚𝐭𝐚 𝐜𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐨𝐧 
+• 𝐑𝐞𝐩𝐨𝐫𝐭 𝐩𝐫𝐢𝐯𝐚𝐜𝐲 𝐜𝐨𝐧𝐜𝐞𝐫𝐧𝐬 
+• 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 𝐟𝐨𝐫 𝐡𝐞𝐥𝐩
 """,
 }
 
@@ -115,14 +114,14 @@ async def privacy_menu(client, message: Message):
         [
             [
                 InlineKeyboardButton(
-                    "Privacy Policy", callback_data="show_privacy_sections"
+                    "ᴘʀɪᴠᴀᴄʏ ᴘᴏʟɪᴄʏ", callback_data="show_privacy_sections"
                 )
             ],
             [
-                InlineKeyboardButton("Retrieve Data", callback_data="retrieve_data"),
-                InlineKeyboardButton("Delete Data", callback_data="delete_data"),
+                InlineKeyboardButton("ʀᴇᴛʀɪᴇᴠᴇ ᴅᴀᴛᴀ", callback_data="retrieve_data"),
+                InlineKeyboardButton("ᴅᴇʟᴇᴛᴇ ᴅᴀᴛᴀ", callback_data="delete_data"),
             ],
-            [InlineKeyboardButton("Close", callback_data="close")],
+            [InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data="close")],
         ]
     )
     await message.reply_text(TEXT, reply_markup=keyboard, disable_web_page_preview=True)
@@ -130,7 +129,7 @@ async def privacy_menu(client, message: Message):
 
 @app.on_callback_query(filters.regex("show_privacy_sections") & ~BANNED_USERS)
 async def show_privacy_sections(client, callback_query):
-    """Show detailed privacy policy sections"""
+    """ꜱʜᴏᴡ ᴅᴇᴛᴀɪʟᴇᴅ ᴘʀɪᴠᴀᴄʏ ᴘᴏʟɪᴄʏ ꜱᴇᴄᴛɪᴏɴꜱ"""
     keyboard = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("What We Collect", callback_data="privacy_collect")],
@@ -145,7 +144,7 @@ async def show_privacy_sections(client, callback_query):
         ]
     )
     await callback_query.edit_message_text(
-        f"{TEXT}\n\nSelect a section to learn more:",
+        f"{TEXT}\n\nꜱᴇʟᴇᴄᴛ ᴀ ꜱᴇᴄᴛɪᴏɴ ᴛᴏ ʟᴇᴀʀɴ ᴍᴏʀᴇ:",
         reply_markup=keyboard,
         disable_web_page_preview=True,
     )
@@ -153,7 +152,7 @@ async def show_privacy_sections(client, callback_query):
 
 @app.on_callback_query(filters.regex("privacy_") & ~BANNED_USERS)
 async def privacy_section_callback(client, callback_query):
-    """Handle privacy section callbacks"""
+    """ʜᴀɴᴅʟᴇ ᴘʀɪᴠᴀᴄʏ ꜱᴇᴄᴛɪᴏɴ ᴄᴀʟʟʙᴀᴄᴋꜱ"""
     section = callback_query.data.split("_")[1]
 
     if section == "back":
@@ -161,16 +160,16 @@ async def privacy_section_callback(client, callback_query):
             [
                 [
                     InlineKeyboardButton(
-                        "Privacy Policy", callback_data="show_privacy_sections"
+                        "ᴘʀɪᴠᴀᴄʏ ᴘᴏʟɪᴄʏ", callback_data="show_privacy_sections"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Retrieve Data", callback_data="retrieve_data"
+                        "ʀᴇᴛʀɪᴇᴠᴇ ᴅᴀᴛᴀ", callback_data="retrieve_data"
                     ),
-                    InlineKeyboardButton("Delete Data", callback_data="delete_data"),
+                    InlineKeyboardButton("ᴅᴇʟᴇᴛᴇ ᴅᴀᴛᴀ", callback_data="delete_data"),
                 ],
-                [InlineKeyboardButton("Close", callback_data="close")],
+                [InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data="close")],
             ]
         )
         return await callback_query.edit_message_text(
@@ -181,8 +180,8 @@ async def privacy_section_callback(client, callback_query):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Back", callback_data="show_privacy_sections"),
-                    InlineKeyboardButton("Close", callback_data="close"),
+                    InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="show_privacy_sections"),
+                    InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data="close"),
                 ],
             ]
         )
@@ -196,19 +195,19 @@ async def export_user_data(_, cq):
     m = await cq.message.edit("Please wait..")
     user_id = cq.from_user.id
     user_data = {
-        "user_id": user_id,
-        "export_date": datetime.now().isoformat(),
-        "basic_info": {
-            "user_id": user_id,
-            "username": cq.from_user.username,
-            "first_name": cq.from_user.first_name,
-            "last_name": cq.from_user.last_name,
+        "ᴜꜱᴇʀ_ɪᴅ": user_id,
+        "ᴇxᴘᴏʀᴛ_ᴅᴀᴛᴇ": datetime.now().isoformat(),
+        "ʙᴀꜱɪᴄ_ɪɴꜰᴏ": {
+            "ᴜꜱᴇʀ_ɪᴅ": user_id,
+            "ᴜꜱᴇʀɴᴀᴍᴇ": cq.from_user.username,
+            "ꜰɪʀꜱᴛ_ɴᴀᴍᴇ": cq.from_user.first_name,
+            "ʟᴀꜱᴛ_ɴᴀᴍᴇ": cq.from_user.last_name,
         },
-        "playlists": {},
-        "authed_in": await find_chat_ids_by_auth_user_id(user_id),
-        "ban_status": await is_banned_user(user_id),
-        "sudo_status": user_id in SUDOERS,
-        "user_stats": await get_userss(user_id),
+        "ᴘʟᴀʏʟɪꜱᴛꜱ": {},
+        "ᴀᴜᴛʜᴇᴅ_ɪɴ": await find_chat_ids_by_auth_user_id(user_id),
+        "ʙᴀɴ_ꜱᴛᴀᴛᴜꜱ": await is_banned_user(user_id),
+        "ꜱᴜᴅᴏ_ꜱᴛᴀᴛᴜꜱ": user_id in SUDOERS,
+        "ᴜꜱᴇʀ_ꜱᴛᴀᴛꜱ": await get_userss(user_id),
     }
     try:
         playlist_names = await get_playlist_names(user_id)
@@ -235,29 +234,29 @@ async def export_user_data(_, cq):
             json.dump(user_data, f, indent=4, ensure_ascii=False)
     except Exception as e:
         return await m.edit(
-            f"Error occurred while creating data file: {str(e)}", show_alert=True
+            f"ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ ᴡʜɪʟᴇ ᴄʀᴇᴀᴛɪɴɢ ᴅᴀᴛᴀ ꜰɪʟᴇ: {str(e)}", show_alert=True
         )
 
     try:
         await cq.message.reply_document(
             document=file_path,
             caption=(
-                "🔒 Here is your user data export from YukkiMusic.\n\n"
-                "⚠️ This file contains your personal information. "
-                "Please handle it carefully and do not share it with others.\n\n"
-                "📊 Includes:\n"
-                "- Personal Information\n"
-                "- Playlists\n"
-                "- Usage Statistics\n"
-                "- Authorization Status\n"
-                "- Ban Status\n"
-                "- Sudo Privileges\n"
+                "🔒 ʜᴇʀᴇ ɪꜱ ʏᴏᴜʀ ᴜꜱᴇʀ ᴅᴀᴛᴀ ᴇxᴘᴏʀᴛ ꜰʀᴏᴍ ʀᴇᴢ.\n\n"
+                "⚠️ ᴛʜɪꜱ ꜰɪʟᴇ ᴄᴏɴᴛᴀɪɴꜱ ʏᴏᴜʀ ᴘᴇʀꜱᴏɴᴀʟ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ. "
+                "ᴘʟᴇᴀꜱᴇ ʜᴀɴᴅʟᴇ ɪᴛ ᴄᴀʀᴇꜰᴜʟʟʏ ᴀɴᴅ ᴅᴏ ɴᴏᴛ ꜱʜᴀʀᴇ ɪᴛ ᴡɪᴛʜ ᴏᴛʜᴇʀꜱ.\n\n"
+                "📊 ɪɴᴄʟᴜᴅᴇꜱ:\n"
+                "- ᴘᴇʀꜱᴏɴᴀʟ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ\n"
+                "- ᴘʟᴀʏʟɪꜱᴛꜱ\n"
+                "- ᴜꜱᴀɢᴇ ꜱᴛᴀᴛɪꜱᴛɪᴄꜱ\n"
+                "- ᴀᴜᴛʜᴏʀɪᴢᴀᴛɪᴏɴ ꜱᴛᴀᴛᴜꜱ\n"
+                "- ʙᴀɴ ꜱᴛᴀᴛᴜꜱ\n"
+                "- ꜱᴜᴅᴏ ᴘʀɪᴠɪʟᴇɢᴇꜱ\n"
             ),
             file_name=f"data_{user_id}_.json",
         )
     except Exception as e:
         await m.edit(
-            f"Error occurred while creating data file: {str(e)}", show_alert=True
+            f"ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ ᴡʜɪʟᴇ ᴄʀᴇᴀᴛɪɴɢ ᴅᴀᴛᴀ ꜰɪʟᴇ: {str(e)}", show_alert=True
         )
     finally:
         try:
@@ -270,11 +269,11 @@ async def export_user_data(_, cq):
 @app.on_callback_query(filters.regex("delete_data"))
 async def retrieve_data(_, cq):
     await cq.message.edit(
-        "Are you sure you want to delete your data?",
+        "ᴀʀᴇ ʏᴏᴜ ꜱᴜʀᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴅᴀᴛᴀ?",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("Yes", callback_data="confirm_delete_data")],
-                [InlineKeyboardButton("No", callback_data="privacy_back")],
+                [InlineKeyboardButton("ʏᴇꜱ", callback_data="confirm_delete_data")],
+                [InlineKeyboardButton("ɴᴏ", callback_data="privacy_back")],
             ]
         ),
     )
@@ -282,7 +281,7 @@ async def retrieve_data(_, cq):
 
 @app.on_callback_query(filters.regex("confirm_delete_data"))
 async def delete_user_data(_, cq):
-    await cq.answer("Please wait...", show_alert=True)
+    await cq.answer("ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ...", show_alert=True)
 
     user_id = cq.from_user.id
 
@@ -304,4 +303,4 @@ async def delete_user_data(_, cq):
         pass
 
     await delete_userss(user_id)
-    await cq.edit_message_text("Your data has been deleted from the bot.")
+    await cq.edit_message_text("ʏᴏᴜʀ ᴅᴀᴛᴀ ʜᴀꜱ ʙᴇᴇɴ ᴅᴇʟᴇᴛᴇᴅ ꜰʀᴏᴍ ᴛʜᴇ ʙᴏᴛ.")
