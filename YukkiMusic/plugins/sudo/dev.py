@@ -151,7 +151,7 @@ async def forceclose_command(_, CallbackQuery):
     if CallbackQuery.from_user.id != int(user_id):
         try:
             return await CallbackQuery.answer(
-                "This is not for you stay away from here", show_alert=True
+                "ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ꜰᴏʀ ʏᴏᴜ ꜱᴛᴀʏ ᴀᴡᴀʏ ꜰʀᴏᴍ ʜᴇʀᴇ", show_alert=True
             )
         except Exception:
             return
@@ -169,7 +169,7 @@ async def forceclose_command(_, CallbackQuery):
 async def shellrunner(_, message: Message):
     if len(message.command) < 2:
         return await edit_or_reply(
-            message, text="<b>Give some commands like:</b>\n/sh git pull"
+            message, text="<b>ɢɪᴠᴇ ꜱᴏᴍᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ʟɪᴋᴇ:</b>\n/sh ɢɪᴛ ᴘᴜʟʟ"
         )
 
     text = message.text.split(None, 1)[1]
