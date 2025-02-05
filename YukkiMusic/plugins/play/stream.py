@@ -43,9 +43,9 @@ async def stream_command(
             await Yukki.stream_call(url)
         except NoActiveGroupCall:
             await mystic.edit_text(
-                "There's an issue with the bot. please report it to my Owner and ask them to check logger group"
+                "ᴛʜᴇʀᴇ'ꜱ ᴀɴ ɪꜱꜱᴜᴇ ᴡɪᴛʜ ᴛʜᴇ ʙᴏᴛ. ᴘʟᴇᴀꜱᴇ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ ᴀɴᴅ ᴀꜱᴋ ᴛʜᴇᴍ ᴛᴏ ᴄʜᴇᴄᴋ ʟᴏɢɢᴇʀ ɢʀᴏᴜᴘ"
             )
-            text = "Please Turn on voice chat.. Bot is unable to stream urls.."
+            text = "ᴘʟᴇᴀꜱᴇ ᴛᴜʀɴ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.. ʙᴏᴛ ɪꜱ ᴜɴᴀʙʟᴇ ᴛᴏ ꜱᴛʀᴇᴀᴍ ᴜʀʟꜱ.."
             return await app.send_message(config.LOG_GROUP_ID, text)
         except Exception as e:
             return await mystic.edit_text(_["general_3"].format(type(e).__name__))
