@@ -93,16 +93,16 @@ async def ping_com(client, message: Message, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️ Duration:** Unknown duration limit\n\nClick on below button to get whole queued list"
+        "**⌛️ ᴅᴜʀᴀᴛɪᴏɴ:** ᴜɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛt\n\nᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ Qᴜᴇᴜᴇᴅ ʟɪꜱᴛ"
         if DUR == "Unknown"
-        else "\nClick on below button to get whole queued list."
+        else "\nᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ Qᴜᴇᴜᴇᴅ ʟɪꜱᴛ."
     )
     cap = f"""**{app.mention} Player**
 
-🎥**Playing:** {title}
+🎥**ᴘʟᴀʏɪɴɢ:** {title}
 
-🔗**Stream Type:** {type}
-🙍‍♂️**Played By:** {user}
+🔗**ꜱᴛʀᴇᴀᴍ ᴛʏᴘᴇ:** {type}
+🙍‍♂️**ᴘʟᴀʏᴇᴅ ʙʏ:** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, "c" if cplay else "g", videoid)
@@ -257,16 +257,16 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️ Duration:** Unknown duration limit\n\nClick on below button to get whole queued list"
+        "**⌛️ ᴅᴜʀᴀᴛɪᴏɴ:** ᴜɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ\n\nᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ Qᴜᴇᴜᴇᴅ ʟɪꜱᴛ"
         if DUR == "Unknown"
-        else "\nClick on below button to get whole queued list."
+        else "\nᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ Qᴜᴇᴜᴇᴅ ʟɪꜱᴛ."
     )
     cap = f"""**{app.mention} Player**
 
-🎥**Playing:** {title}
+🎥**ᴘʟᴀʏɪɴɢ:** {title}
 
-🔗**Stream Type:** {type}
-🙍‍♂️**Played By:** {user}
+🔗**ꜱᴛʀᴇᴀᴍ ᴛʏᴘᴇ:** {type}
+🙍‍♂️**ᴘʟᴀʏᴇᴅ ʙʏ:** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, cplay, videoid)
