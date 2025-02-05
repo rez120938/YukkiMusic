@@ -88,5 +88,5 @@ def heroku():
                 LOGGER(__name__).info(f"Heroku App Configured")
             except Exception:
                 LOGGER(__name__).warning(
-                    f"Please make sure your Heroku API Key and Your App name are configured correctly in the heroku."
+                    f"ᴘʟᴇᴀꜱᴇ ᴍᴀᴋᴇ ꜱᴜʀᴇ ʏᴏᴜʀ ʜᴇʀᴏᴋᴜ ᴀᴘɪ ᴋᴇʏ ᴀɴᴅ ʏᴏᴜʀ ᴀᴘᴘ ɴᴀᴍᴇ ᴀʀᴇ ᴄᴏɴꜰɪɢᴜʀᴇᴅ ᴄᴏʀʀᴇᴄᴛʟʏ ɪɴ ᴛʜᴇ ʜᴇʀᴏᴋᴜ."
                 )
