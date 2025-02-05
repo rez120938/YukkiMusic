@@ -62,9 +62,9 @@ async def export_database(client, message):
         return
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**Due to some privacy Issue, You can't Import/Export when you are using Yukki Database\n\n Please Fill Your MONGO_DB_URI in vars to use this features**"
+            "**ᴅᴜᴇ ᴛᴏ ꜱᴏᴍᴇ ᴘʀɪᴠᴀᴄʏ ɪꜱꜱᴜᴇ, ʏᴏᴜ ᴄᴀɴ'ᴛ ɪᴍᴘᴏʀᴛ/ᴇxᴘᴏʀᴛ ᴡʜᴇɴ ʏᴏᴜ ᴀʀᴇ ᴜꜱɪɴɢ ʏᴜᴋᴋɪ ᴅᴀᴛᴀʙᴀꜱᴇ\n\n ᴘʟᴇᴀꜱᴇ ꜰɪʟʟ ʏᴏᴜʀ ᴍᴏɴɢᴏ_ᴅʙ_ᴜʀɪ ɪɴ ᴠᴀʀꜱ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ꜰᴇᴀᴛᴜʀᴇꜱ**"
         )
-    mystic = await message.reply_text("Exporting Your mongodatabase...")
+    mystic = await message.reply_text("ᴇxᴘᴏʀᴛɪɴɢ ʏᴏᴜʀ ᴍᴏɴɢᴏᴅᴀᴛᴀʙᴀꜱᴇ...")
     _mongo_async_ = AsyncIOMotorClient(MONGO_DB_URI)
     databases = await _mongo_async_.list_database_names()
 
@@ -75,14 +75,14 @@ async def export_database(client, message):
         db = _mongo_async_[db_name]
         mystic = await edit_or_reply(
             mystic,
-            f"Found Data of {db_name} Database. **Uploading** and **Deleting**...",
+            f"ꜰᴏᴜɴᴅ ᴅᴀᴛᴀ ᴏꜰ {db_name} ᴅᴀᴛᴀʙᴀꜱᴇ. **ᴜᴘʟᴏᴀᴅɪɴɢ** and **ᴅᴇʟᴇᴛɪɴɢ**...",
         )
 
         file_path = await ex_port(db, db_name)
         try:
 
             await app.send_document(
-                message.chat.id, file_path, caption=f"MᴏɴɢᴏDB ʙᴀᴄᴋᴜᴘ ᴅᴀᴛᴀ ғᴏʀ {db_name}"
+                message.chat.id, file_path, caption=f"ᴍᴏɴɢᴏᴅʙ ʙᴀᴄᴋᴜᴘ ᴅᴀᴛᴀ ҒᴏƦ  {db_name}"
             )
         except FloodWait as e:
             await asyncio.sleep(e.value)
@@ -91,7 +91,7 @@ async def export_database(client, message):
         except OperationFailure:
             mystic = await edit_or_reply(
                 mystic,
-                f"In Your Mongodb deleting database is not allowed So i can't delete the  {db_name} Database",
+                f"ɪɴ ʏᴏᴜʀ ᴍᴏɴɢᴏᴅʙ ᴅᴇʟᴇᴛɪɴɢ ᴅᴀᴛᴀʙᴀꜱᴇ ɪꜱ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ꜱᴏ ɪ ᴄᴀɴ'ᴛ ᴅᴇʟᴇᴛᴇ ᴛʜᴇ {db_name} ᴅᴀᴛᴀʙᴀꜱᴇ",
             )
         try:
             os.remove(file_path)
@@ -99,11 +99,11 @@ async def export_database(client, message):
             pass
 
     db = _mongo_async_[DB_NAME]
-    mystic = await edit_or_reply(mystic, f"Please Wait...\nExporting data of Bot")
+    mystic = await edit_or_reply(mystic, f"ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ...\nᴇxᴘᴏʀᴛɪɴɢ ᴅᴀᴛᴀ ᴏꜰ ʙᴏᴛ")
 
     async def progress(current, total):
         try:
-            await mystic.edit_text(f"Uploading.... {current * 100 / total:.1f}%")
+            await mystic.edit_text(f"ᴜᴘʟᴏᴀᴅɪɴɢ.... {current * 100 / total:.1f}%")
         except FloodWait as e:
             await asyncio.sleep(e.value)
 
@@ -112,7 +112,7 @@ async def export_database(client, message):
         await app.send_document(
             message.chat.id,
             file_path,
-            caption=f"Mongo Backup of {app.mention}. You can import This in a new mongodb instance by replying /import",
+            caption=f"ᴍᴏɴɢᴏ ʙᴀᴄᴋᴜᴘ ᴏꜰ {app.mention}. ʏᴏᴜ ᴄᴀɴ ɪᴍᴘᴏʀᴛ ᴛʜɪꜱ ɪɴ ᴀ ɴᴇᴡ ᴍᴏɴɢᴏᴅʙ ɪɴꜱᴛᴀɴᴄᴇ ʙʏ ʀᴇᴘʟʏɪɴɢ /import",
             progress=progress,
         )
     except FloodWait as e:
@@ -127,19 +127,19 @@ async def import_database(client, message):
         return
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**Due to some privacy Issue, You can't Import/Export when you are using Yukki Database\n\n Please Fill Your MONGO_DB_URI in vars to use this features**"
+            "**ᴅᴜᴇ ᴛᴏ ꜱᴏᴍᴇ ᴘʀɪᴠᴀᴄʏ ɪꜱꜱᴜᴇ, ʏᴏᴜ ᴄᴀɴ'ᴛ ɪᴍᴘᴏʀᴛ/ᴇxᴘᴏʀᴛ ᴡʜᴇɴ ʏᴏᴜ ᴀʀᴇ ᴜꜱɪɴɢ ʏᴜᴋᴋɪ ᴅᴀᴛᴀʙᴀꜱᴇ\n\n ᴘʟᴇᴀꜱᴇ ꜰɪʟʟ ʏᴏᴜʀ ᴍᴏɴɢᴏ_ᴅʙ_ᴜʀɪ ɪɴ ᴠᴀʀꜱ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ꜰᴇᴀᴛᴜʀᴇꜱ**"
         )
 
     if not message.reply_to_message or not message.reply_to_message.document:
         return await message.reply_text(
-            "You need to reply an exported file to import it."
+            "ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ʀᴇᴘʟʏ ᴀɴ ᴇxᴘᴏʀᴛᴇᴅ ꜰɪʟᴇ ᴛᴏ ɪᴍᴘᴏʀᴛ ɪᴛ."
         )
 
-    mystic = await message.reply_text("Downloading...")
+    mystic = await message.reply_text("ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...")
 
     async def progress(current, total):
         try:
-            await mystic.edit_text(f"Downloading... {current * 100 / total:.1f}%")
+            await mystic.edit_text(f"ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ... {current * 100 / total:.1f}%")
         except FloodWait as w:
             await asyncio.sleep(w.value)
 
@@ -150,12 +150,12 @@ async def import_database(client, message):
             data = json.load(backup_file)
     except (json.JSONDecodeError, IOError):
         return await edit_or_reply(
-            mystic, "Invalid Data Format Please Provide A Valid Exported File"
+            mystic, "ɪɴᴠᴀʟɪᴅ ᴅᴀᴛᴀ ꜰᴏʀᴍᴀᴛ ᴘʟᴇᴀꜱᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴠᴀʟɪᴅ ᴇxᴘᴏʀᴛᴇᴅ ꜰɪʟᴇ"
         )
 
     if not isinstance(data, dict):
         return await edit_or_reply(
-            mystic, "Invalid Data Format Please Provide A Valid Exported File"
+            mystic, "ɪɴᴠᴀʟɪᴅ ᴅᴀᴛᴀ ꜰᴏʀᴍᴀᴛ ᴘʟᴇᴀꜱᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴠᴀʟɪᴅ ᴇxᴘᴏʀᴛᴇᴅ ꜰɪʟᴇ"
         )
 
     _mongo_async_ = AsyncIOMotorClient(MONGO_DB_URI)
@@ -165,7 +165,7 @@ async def import_database(client, message):
         for collection_name, documents in data.items():
             if documents:
                 mystic = await edit_or_reply(
-                    mystic, f"Importing...\nCollection {collection_name}."
+                    mystic, f"ɪᴍᴘᴏʀᴛɪɴɢ...\nᴄᴏʟʟᴇᴄᴛɪᴏɴ {collection_name}."
                 )
                 collection = db[collection_name]
 
@@ -174,9 +174,9 @@ async def import_database(client, message):
                         {"_id": document["_id"]}, document, upsert=True
                     )
 
-        await edit_or_reply(mystic, "Data successfully imported from replied file")
+        await edit_or_reply(mystic, "ᴅᴀᴛᴀ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ɪᴍᴘᴏʀᴛᴇᴅ ꜰʀᴏᴍ ʀᴇᴘʟɪᴇᴅ ꜰɪʟᴇ")
     except Exception as e:
-        await edit_or_reply(mystic, f"Error during import {e}\nRolling back changes")
+        await edit_or_reply(mystic, f"ᴇʀʀᴏʀ ᴅᴜʀɪɴɢ ɪᴍᴘᴏʀᴛ {e}\nʀᴏʟʟɪɴɢ ʙᴀᴄᴋ ᴄʜᴀɴɢᴇꜱ)
 
     if os.path.exists(file_path):
         os.remove(file_path)
