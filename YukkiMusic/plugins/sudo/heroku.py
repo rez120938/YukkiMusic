@@ -259,13 +259,13 @@ async def update_(client, message, _):
         f"<b>➣ #{info.count()}: <a href={REPO_}/commit/{info}>{info.summary}</a> By -> {info.author}</b>\n\t\t\t\t<b>➥ Commited On:</b> {ordinal(int(datetime.fromtimestamp(info.committed_date).strftime('%d')))} {datetime.fromtimestamp(info.committed_date).strftime('%b')}, {datetime.fromtimestamp(info.committed_date).strftime('%Y')}\n\n"
         for info in repo.iter_commits(f"HEAD..origin/{config.UPSTREAM_BRANCH}")
     )
-    _update_response_ = "**A new upadte is available for the Bot! **\n\n➣ Pushing upadtes Now\n\n__**Updates:**__\n"
+    _update_response_ = "**ᴀ ɴᴇᴡ ᴜᴘᴀᴅᴛᴇ ɪꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ꜰᴏʀ ᴛʜᴇ ʙᴏᴛ!**\n\n➣ ᴘᴜꜱʜɪɴɢ ᴜᴘᴀᴅᴛᴇꜱ ɴᴏᴡ\n\n__**ᴜᴘᴀᴅᴛᴇꜱ:**__\n"
     _final_updates_ = f"{_update_response_} {updates}"
 
     if len(_final_updates_) > 4096:
         url = await Yukkibin(updates)
         nrs = await response.edit(
-            f"**A new upadte is available for the Bot!**\n\n➣ Pushing upadtes Now\n\n__**Updates:**__\n\n[Check Upadtes]({url})",
+            f"**ᴀ ɴᴇᴡ ᴜᴘᴀᴅᴛᴇ ɪꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ꜰᴏʀ ᴛʜᴇ ʙᴏᴛ!**\n\n➣ ᴘᴜꜱʜɪɴɢ ᴜᴘᴀᴅᴛᴇꜱ ɴᴏᴡ\n\n__**ᴜᴘᴀᴅᴛᴇꜱ:**__\n\n[Check Upadtes]({url})",
             disable_web_page_preview=True,
         )
     else:
@@ -278,7 +278,7 @@ async def update_(client, message, _):
             try:
                 await app.send_message(
                     chat_id=int(x),
-                    text="{0} Is upadted herself\n\nYou can start playing after 15-20 Seconds".format(
+                    text="{0} ɪꜱ ᴜᴘᴀᴅᴛᴇᴅ ʜᴇʀꜱᴇʟꜰ\n\nʏᴏᴜ ᴄᴀɴ ꜱᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ᴀꜰᴛᴇʀ 15-20 ꜱᴇᴄᴏɴᴅꜱ".format(
                         app.mention
                     ),
                 )
@@ -288,7 +288,7 @@ async def update_(client, message, _):
                 pass
         await response.edit(
             _final_updates_
-            + f"» Bot Upadted Sucessfully Now wait until the bot starts",
+            + f"» ʙᴏᴛ ᴜᴘᴀᴅᴛᴇᴅ ꜱᴜᴄᴇꜱꜱꜰᴜʟʟʏ ɴᴏᴡ ᴡᴀɪᴛ ᴜɴᴛɪʟ ᴛʜᴇ ʙᴏᴛ ꜱᴛᴀʀᴛꜱ",
             disable_web_page_preview=True,
         )
     except Exception:
@@ -302,11 +302,11 @@ async def update_(client, message, _):
             return
         except Exception as err:
             await response.edit(
-                f"{nrs.text}\n\nSomething went wrong, Please check logs"
+                f"{nrs.text}\n\nꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ,ᴘʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ʟᴏɢꜱ"
             )
             return await app.send_message(
                 chat_id=config.LOGGER_ID,
-                text="An exception occurred #updater due to : <code>{0}</code>".format(
+                text="ᴀɴ ᴇxᴄᴇᴘᴛɪᴏɴ ᴏᴄᴄᴜʀʀᴇᴅ #ᴜᴘᴅᴀᴛᴇʀ ᴅᴜᴇ ᴛᴏ : <code>{0}</code>".format(
                     err
                 ),
             )
@@ -320,7 +320,7 @@ async def update_(client, message, _):
 @AdminActual
 async def reboot(client, message: Message, _):
     mystic = await message.reply_text(
-        f"Please Wait... \nRebooting{app.mention} For Your Chat."
+        f"ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ... \nRebooting{app.mention} For Your Chat."
     )
     await asyncio.sleep(1)
     try:
@@ -339,7 +339,7 @@ async def reboot(client, message: Message, _):
             await Yukki.stop_stream(chat_id)
         except Exception:
             pass
-    return await mystic.edit_text("Sucessfully Restarted \nTry playing Now..")
+    return await mystic.edit_text("ꜱᴜᴄᴇꜱꜱꜰᴜʟʟʏ ʀᴇꜱᴛᴀʀᴛᴇᴅ  \nᴛʀʏ ᴘʟᴀʏɪɴɢ ɴᴏᴡ..")
 
 
 @app.on_message(command("RESTART_COMMAND") & ~BANNED_USERS)
@@ -348,13 +348,13 @@ async def restart_(client, message):
         if message.chat.type not in [ChatType.GROUP, ChatType.SUPERGROUP]:
             return
         return await reboot(client, message)
-    response = await message.reply_text("Restarting...")
+    response = await message.reply_text("ʀᴇꜱᴛᴀʀᴛɪɴɢ...")
     ac_chats = await get_active_chats()
     for x in ac_chats:
         try:
             await app.send_message(
                 chat_id=int(x),
-                text=f"{app.mention} Is restarting...\n\nYou can start playing after 15-20 seconds",
+                text=f"{app.mention} ɪꜱ ʀᴇꜱᴛᴀʀᴛɪɴɢ...\n\nʏᴏᴜ ᴄᴀɴ ꜱᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ᴀꜰᴛᴇʀ 15-20 ꜱᴇᴄᴏɴᴅ",
             )
             await remove_active_chat(x)
             await remove_active_video_chat(x)
@@ -368,6 +368,6 @@ async def restart_(client, message):
     except Exception:
         pass
     await response.edit_text(
-        "Restart process started, please wait for few seconds until the bot starts..."
+        "ʀᴇꜱᴛᴀʀᴛ ᴘʀᴏᴄᴇꜱꜱ ꜱᴛᴀʀᴛᴇᴅ, ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ꜰᴏʀ ꜰᴇᴡ ꜱᴇᴄᴏɴᴅꜱ ᴜɴᴛɪʟ ᴛʜᴇ ʙᴏᴛ ꜱᴛᴀʀᴛꜱ..."
     )
     os.system(f"kill -9 {os.getpid()} && python3 -m YukkiMusic")
