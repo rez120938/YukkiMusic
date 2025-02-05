@@ -72,16 +72,16 @@ async def language_markup(client, CallbackQuery, _):
     old = await get_lang(CallbackQuery.message.chat.id)
     if str(old) == str(langauge):
         return await CallbackQuery.answer(
-            "You are already using same language", show_alert=True
+            "ʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴜꜱɪɴɢ ꜱᴀᴍᴇ ʟᴀɴɢᴜᴀɢᴇ", show_alert=True
         )
     try:
         _ = get_string(langauge)
         await CallbackQuery.answer(
-            "Your language changed successfully..", show_alert=True
+            "ʏᴏᴜʀ ʟᴀɴɢᴜᴀɢᴇ ᴄʜᴀɴɢᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ..", show_alert=True
         )
     except Exception:
         return await CallbackQuery.answer(
-            "Failed to change language or language in under Upadte",
+            "ꜰᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ʟᴀɴɢᴜᴀɢᴇ ᴏʀ ʟᴀɴɢᴜᴀɢᴇ ɪɴ ᴜɴᴅᴇʀ ᴜᴘᴀᴅᴛᴇ",
             show_alert=True,
         )
     await set_lang(CallbackQuery.message.chat.id, langauge)
