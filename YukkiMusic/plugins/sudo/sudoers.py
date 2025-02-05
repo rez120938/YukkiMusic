@@ -24,7 +24,7 @@ from YukkiMusic.utils.decorators.language import language
 async def useradd(client, message: Message, _):
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**Due to privacy issues, You can't manage sudoers when you are on Yukki Database.\n\n Please fill Your MONGO_DB_URI in your vars to use this features**"
+            "**ᴅᴜᴇ ᴛᴏ ᴘʀɪᴠᴀᴄʏ ɪꜱꜱᴜᴇꜱ,ʏᴏᴜ ᴄᴀɴ'ᴛ ᴍᴀɴᴀɢᴇ ꜱᴜᴅᴏᴇʀꜱ ᴡʜᴇɴ ʏᴏᴜ ᴀʀᴇ ᴏɴ ʏᴜᴋᴋɪ ᴅᴀᴛᴀʙᴀꜱᴇ.\n\n ᴘʟᴇᴀꜱᴇ ꜰɪʟʟ ʏᴏᴜʀ ᴍᴏɴɢᴏ_ᴅʙ_ᴜʀɪ ɪɴ ʏᴏᴜʀ ᴠᴀʀꜱ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ꜰᴇᴀᴛᴜʀᴇꜱ**"
         )
     if not message.reply_to_message:
         if len(message.command) != 2:
@@ -78,7 +78,7 @@ async def userdel(client, message: Message, _):
             SUDOERS.remove(user.id)
             await message.reply_text(_["sudo_4"])
             return
-        await message.reply_text(f"Something wrong happened")
+        await message.reply_text(f"ꜱᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ʜᴀᴘᴘᴇɴᴇᴅ")
         return
     user_id = message.reply_to_message.from_user.id
     if user_id not in SUDOERS:
@@ -88,7 +88,7 @@ async def userdel(client, message: Message, _):
         SUDOERS.remove(user_id)
         await message.reply_text(_["sudo_4"])
         return
-    await message.reply_text(f"Something wrong happened")
+    await message.reply_text(f"ꜱᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ʜᴀᴘᴘᴇɴᴇᴅ")
 
 
 @app.on_message(command("SUDOUSERS_COMMAND") & ~BANNED_USERS)
