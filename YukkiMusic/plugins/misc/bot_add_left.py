@@ -30,12 +30,12 @@ async def on_bot_added(_, message):
                     message.chat.username if message.chat.username else "ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
                 )
                 msg = (
-                    f"**Music bot added in new Group #New_Group**\n\n"
-                    f"**Chat Name:** {message.chat.title}\n"
-                    f"**Chat Id:** {message.chat.id}\n"
-                    f"**Chat Username:** @{username}\n"
-                    f"**Chat Member Count:** {count}\n"
-                    f"**Added By:** {message.from_user.mention}"
+                    f"**ᴍᴜꜱɪᴄ ʙᴏᴛ ᴀᴅᴅᴇᴅ ɪɴ ɴᴇᴡ ɢʀᴏᴜᴘ #New_Group**\n\n"
+                    f"**ᴄʜᴀᴛ ɴᴀᴍᴇ:** {message.chat.title}\n"
+                    f"**ᴄʜᴀᴛ ɪᴅ:** {message.chat.id}\n"
+                    f"**ᴄʜᴀᴛ ᴜꜱᴇʀɴᴀᴍᴇ:** @{username}\n"
+                    f"**ᴄʜᴀᴛ ᴍᴇᴍʙᴇʀ ᴄᴏᴜɴᴛ:** {count}\n"
+                    f"**ᴀᴅᴅᴇᴅ ʙʏ:** {message.from_user.mention}"
                 )
                 await app.send_message(
                     LOG_GROUP_ID,
@@ -44,7 +44,7 @@ async def on_bot_added(_, message):
                         [
                             [
                                 InlineKeyboardButton(
-                                    text=f"Added by: {message.from_user.first_name}",
+                                    text=f"ᴀᴅᴅᴇᴅ ʙʏ: {message.from_user.first_name}",
                                     user_id=message.from_user.id,
                                 )
                             ]
@@ -75,11 +75,11 @@ async def on_bot_kicked(_, message: Message):
             )
             chat_id = message.chat.id
             left = (
-                f"Bot was Removed in {title} #Left_group\n"
-                f"**Chat Name**: {title}\n"
-                f"**Chat Id**: {chat_id}\n"
-                f"**Chat Username**: {username}\n"
-                f"**Removed By**: {remove_by}"
+                f"ʙᴏᴛ ᴡᴀꜱ ʀᴇᴍᴏᴠᴇᴅ ɪɴ {title} #Left_group\n"
+                f"**ᴄʜᴀᴛ ɴᴀᴍᴇ**: {title}\n"
+                f"**ᴄʜᴀᴛ ɪᴅ**: {chat_id}\n"
+                f"**ᴄʜᴀᴛ ᴜꜱᴇʀɴᴀᴍᴇ**: {username}\n"
+                f"**ʀᴇᴍᴏᴠᴇᴅ ʙʏ**: {remove_by}"
             )
 
             await app.send_message(
@@ -89,7 +89,7 @@ async def on_bot_kicked(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                text=f"Removed By: {message.from_user.first_name}",
+                                text=f"ʀᴇᴍᴏᴠᴇᴅ ʙʏ: {message.from_user.first_name}",
                                 user_id=message.from_user.id,
                             )
                         ]
