@@ -105,7 +105,7 @@ async def gstats_global(client, message: Message, _):
         vidid,
     ) = await Platform.youtube.details(videoid, True)
     title = title.title()
-    final = f"Top played Tracks on  {app.mention}\n\n**Title:** {title}\n\nPlayed** {co} **times"
+    final = f"ᴛᴏᴘ ᴘʟᴀʏᴇᴅ ᴛʀᴀᴄᴋꜱ ᴏɴ   {app.mention}\n\n**ᴛɪᴛʟᴇ:** {title}\n\nᴘʟᴀʏᴇᴅ** {co} **ᴛɪᴍᴇꜱ"
     upl = get_stats_markup(_, True if message.from_user.id in SUDOERS else False)
     await app.send_photo(
         message.chat.id,
@@ -171,9 +171,9 @@ async def top_users_ten(client, CallbackQuery: CallbackQuery, _):
                 details = stats.get(items)
                 title = (details["title"][:35]).title()
                 if items == "telegram":
-                    msg += f"🔗[TelegramVideos and media's](https://t.me/telegram) ** Played {count} Times**\n\n"
+                    msg += f"🔗[TelegramVideos and media's](https://t.me/telegram) ** ᴘʟᴀʏᴇᴅ{count} ᴛɪᴍᴇꜱ**\n\n"
                 else:
-                    msg += f"🔗 [{title}](https://www.youtube.com/watch?v={items}) ** Played {count} Times**\n\n"
+                    msg += f"🔗 [{title}](https://www.youtube.com/watch?v={items}) ** ᴘʟᴀʏᴇᴅ{count} ᴛɪᴍᴇꜱ**\n\n"
 
             temp = (
                 _["gstats_4"].format(
@@ -256,22 +256,22 @@ async def overall_stats(client, CallbackQuery, _):
         ass = "Yes"
     else:
         ass = "No"
-    text = f"""**Bot's Stats and information:**
+    text = f"""**ʙᴏᴛ'ꜱ ꜱᴛᴀᴛꜱ ᴀɴᴅ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ:**
 
-**Imported Modules:** {mod}
-**Served chats:** {served_chats} 
-**Served Users:** {served_users} 
-**Blocked Users:** {blocked} 
-**Sudo Users:** {sudoers} 
+**ɪᴍᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇꜱ:** {mod}
+**ꜱᴇʀᴠᴇᴅ ᴄʜᴀᴛꜱ:** {served_chats} 
+**ꜱᴇʀᴠᴇᴅ ᴜꜱᴇʀꜱ:** {served_users} 
+**ʙʟᴏᴄᴋᴇᴅ ᴜꜱᴇʀꜱ:** {blocked} 
+**ꜱᴜᴅᴏ ᴜꜱᴇʀꜱ:** {sudoers} 
     
-**Total Queries:** {total_queries} 
-**Total Assistant:** {assistant}
-**Auto Leaving Assistsant:** {ass}
+**ᴛᴏᴛᴀʟ Qᴜᴇʀɪᴇꜱ:** {total_queries} 
+**ᴛᴏᴛᴀʟ ᴀꜱꜱɪꜱᴛᴀɴᴛ:** {assistant}
+**ᴀᴜᴛᴏ ʟᴇᴀᴠɪɴɢ ᴀꜱꜱɪꜱᴛꜱᴀɴᴛ:** {ass}
 
-**Play Duration Limit:** {play_duration} ᴍɪɴs
-**Song Download Limit:** {song} ᴍɪɴs
-**Bot's Server Playlist Limit:** {playlist_limit}
-**Playlist Play Limit:** {fetch_playlist}"""
+**ᴘʟᴀʏ ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ:** {play_duration} ᴍɪɴs
+**ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪᴍɪᴛ:** {song} ᴍɪɴs
+**ʙᴏᴛ'ꜱ ꜱᴇʀᴠᴇʀ ᴘʟᴀʏʟɪꜱᴛ ʟɪᴍɪᴛ:** {playlist_limit}
+**ᴘʟᴀʏʟɪꜱᴛ ᴘʟᴀʏ ʟɪᴍɪᴛ:** {fetch_playlist}"""
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
         await CallbackQuery.edit_message_media(media=med, reply_markup=upl)
