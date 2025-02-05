@@ -24,10 +24,10 @@ async def auto_end_stream(client, message):
     if state == "enable":
         await autoend_on()
         await message.reply_text(
-            "Auto End enabled.\n\nBot will leave voicechat automatically after 30 secinds if one is listening song with a warning message.."
+            "ᴀᴜᴛᴏ ᴇɴᴅ ᴇɴᴀʙʟᴇᴅ.\n\nʙᴏᴛ ᴡɪʟʟ ʟᴇᴀᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴀꜰᴛᴇʀ 30 ꜱᴇᴄɪɴᴅꜱ ɪꜰ ᴏɴᴇ ɪꜱ ʟɪꜱᴛᴇɴɪɴɢ ꜱᴏɴɢ ᴡɪᴛʜ ᴀ ᴡᴀʀɴɪɴɢ ᴍᴇꜱꜱᴀɢᴇ.."
         )
     elif state == "disable":
         await autoend_off()
-        await message.reply_text("Autoend disabled")
+        await message.reply_text("ᴀᴜᴛᴏᴇɴᴅ ᴅɪꜱᴀʙʟᴇᴅ")
     else:
         await message.reply_text(usage)
