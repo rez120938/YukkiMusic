@@ -13,9 +13,9 @@ tg_1 : "⚠️ Bot sedang **overloaded**  muat turun sekarang.\n\n**Sila coba se
 tg_2 : "❌ Gagal download media dari Telegram."
 
 # Core - Call.py
-call_1 : "🤖 Bot memerlukan **admin** permission to invite assistant account to your channel."
-call_2 : "🚫 Assistant is banned in your group or channel.\nPlease unban and play song again\n\n**Assistant username:** @{0}\n**Assistant ID:** {1}"
-call_3 : "❗ Exception occurred while inviting assistant account to your.\n\n**Reason**: {0}"
+call_1 : "🤖 Bot memerlukan **admin** kebenaran untuk menjemput akaun asisten ke saluran anda."
+call_2 : "🚫 Assistant telah diban dari group atau channel anda.\nSila unban dan maiankan lagu sekali lagi.\n\n**Assisten username:** @{0}\n**Assisten ID:** {1}"
+call_3 : "❗ Pengecualian berlaku semasa menjemput akaun asisten ke akaun anda.\n\n**Reason**: {0}"
 call_4 : "🔗 Bot requires **invite users via link** permission to invite assistant account to your chat group."
 call_5 : "⏳ Assistant account will be joining in 5 seconds, please wait..."
 call_6 : "✅ Assistant account of {0} joined successfully.\n\nStarting music now."
