@@ -19,7 +19,7 @@ call_3 : "❗ Pengecualian berlaku semasa menjemput akaun asisten ke akaun anda.
 call_4 : "🔗 Bot memerlukan **invite users via link** kebenaran untuk menjemput akaun asisten ke group ini."
 call_5 : "⏳ Akaun asisten akan menyertai dalam masa 5 saat, sila tunggu..."
 call_6 : "✅ Akaun asisten of {0} berjaya menyertainya.\n\nStarting music now."
-call_7 : "❌ **Failed to Gagal menukar stream **\Sila guna /skip untuk tukar lagu lain."
+call_7 : "❌ **Failed to Gagal menukar stream **\nSila guna /skip untuk tukar lagu lain."
 call_8 : "📥 lagu seterusnya dari playlist...."
 call_9 : "📉 Asisten terlalu banyak group, oleh itu asisten tidak boleh menyertai di sini\nContact [Support Group]({0}) untuk membetulkan dan memaklumkan masalah ini."
 call_10: "⏳ Asisten berada di FloodWait kerana join/leave sila tunggu {0} saat."
